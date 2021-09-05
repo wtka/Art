@@ -1,0 +1,30 @@
+.timeline {
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;    
+    right: 0;
+    height: 2px; 
+    background-color: $secondary;
+  }
+  &-pointer {
+    &::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      transform: translateX(-50%); 
+      border: 1px solid $secondary;
+      background-color: $white;
+      z-index: 1;
+    }
+  }
+  &-pointer--finished {
+    &::before {
+      background-color: $secondary;
+    }
+  }
+}

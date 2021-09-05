@@ -1,0 +1,7 @@
+.btn-hover,
+.link-hover,
+.icon-hover{
+  &:hover{
+    color: $primary !important;
+  }
+}

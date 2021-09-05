@@ -1,0 +1,61 @@
+.homebanner {
+  @include background( "homebanner.jpg", no-repeat, cover, center);
+  min-height: 480px;
+}
+.footer {
+  &__banner {
+    @include background( "footer-banner.jpg", no-repeat, cover, center);
+    min-height: 400px;
+    @include media-breakpoint-down(lg) {
+      &::after {
+        content: '';
+        @include mask( $black, .6);
+      }
+    }
+  }
+}
+.exhibition {
+  .card {
+    @include media-breakpoint-up(md) {
+      &-body {
+        min-height: 350px;
+      }
+      &-desc {
+        @include text-truncate-multi( 4 );
+      }
+    }
+  }
+}
+.liveReplay {
+  .card {
+    @include background( "people-bg.png", no-repeat, cover, center);
+    &-desc {
+      background-color: #190014CC;
+    }
+    &-title-line::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      right: 0;
+      width: 1px;
+      height: 42px;
+      background-color: $white;
+    }
+  }
+}
+.detailTicket {
+  @include media-breakpoint-up(md) {
+    &__body {
+      height: 16rem;
+    }
+    &__body:first-child::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background-color: $black;
+    }
+  }
+}
