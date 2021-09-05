@@ -1,19 +1,21 @@
-$(function() {
-  console.log('Hello Bootstrap5');
-});
+"use strict";
 
-// swiper
+$(function () {
+  console.log('Hello Bootstrap5');
+}); // swiper
+
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   breakpoints: {
-    768:{
+    768: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 30
     },
-    992:{
+    992: {
       slidesPerView: 3,
-      spaceBetween: 30,
-    },
+      spaceBetween: 30
+    }
   }
 });
+//# sourceMappingURL=all.js.map
